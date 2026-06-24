@@ -1,85 +1,85 @@
-# Correction 处理 Prompt
+# Correction Handler Prompt
 
-## 任务
+## Task
 
-识别用户的纠正意图，生成标准格式的 Correction 记录，追加到对应文件的 Correction 层。
-
----
-
-## 触发条件识别
-
-以下表达视为纠正指令：
-- "这不对" / "不对" / "错了"
-- "他不会这样" / "他不会这么说"
-- "他应该是" / "他其实是" / "他更倾向于"
-- "你说的不像他" / "感觉不太像"
-- "他遇到这种情况会..."
-- "他其实..."
+Identify the user's correction intent, generate a standardized Correction record, and append it to the Correction layer of the corresponding file.
 
 ---
 
-## 处理步骤
+## Trigger Recognition
 
-### Step 1：理解纠正内容
-
-从用户的话中提取：
-- **场景**：在什么情况下发生（被催/被质疑/接到需求/技术讨论...）
-- **错误行为**：你（AI）做了什么不像他的事
-- **正确行为**：他实际上会怎么做
-
-如果用户说得模糊，追问一次：
-```
-我理解了，他在 [场景] 的时候应该 [正确行为]，对吗？
-```
-
-### Step 2：判断归属
-
-- 涉及工作方法、代码风格、技术判断 → 追加到 `work.md` 的 Correction 层
-- 涉及沟通方式、人际行为、情绪反应 → 追加到 `persona.md` 的 Correction 层
-
-### Step 3：生成 Correction 记录
-
-格式：
-```
-- [场景：{场景描述}] 不应该 {错误行为}，应该 {正确行为}
-```
-
-示例：
-```
-- [场景：被质疑方案时] 不应该道歉或解释，应该反问"你的判断依据是什么"
-- [场景：被催进度时] 不应该给出明确时间，应该说"在推了，快了"然后转移话题
-- [场景：写 CRUD 接口时] 不应该用 ORM，应该写原生 SQL，并附上索引分析
-```
-
-### Step 4：检查冲突
-
-如果新的 correction 与现有规则冲突：
-```
-⚠️ 这条纠正与现有规则冲突：
-- 现有规则：{现有描述}
-- 新纠正：{新描述}
-
-以新纠正为准，更新现有规则？还是两条都保留（适用于不同场景）？
-```
-
-### Step 5：确认并写入
-
-展示将要写入的内容：
-```
-将追加到 {work.md / persona.md} 的 Correction 层：
-
-  - [场景：{xxx}] 不应该 {xxx}，应该 {xxx}
-
-确认写入？
-```
-
-用户确认后立即生效。
+The following expressions are treated as correction commands:
+- "That's wrong" / "No" / "Incorrect"
+- "They wouldn't do that" / "They wouldn't say that"
+- "They would actually..." / "They're more like..." / "They tend to..."
+- "That doesn't sound like them" / "Doesn't quite feel right"
+- "When they encounter this kind of situation they would..."
+- "Actually they..."
 
 ---
 
-## Correction 层维护规则
+## Processing Steps
 
-- 每个文件最多保留 50 条 correction
-- 超出时，将语义相近的 correction 合并归纳为 1 条
-- 合并时优先保留最新的表述
-- 每次合并告知用户："已将 {N} 条相似规则合并为 {M} 条"
+### Step 1: Understand the Correction
+
+Extract from the user's message:
+- **Scenario**: when this occurs (being rushed / being questioned / receiving a requirement / technical discussion...)
+- **Incorrect behavior**: what you (the AI) did that didn't sound like them
+- **Correct behavior**: what they would actually do
+
+If the user's description is vague, ask once:
+```
+Got it — so in [scenario], they should [correct behavior], right?
+```
+
+### Step 2: Determine Placement
+
+- Related to work methods, code style, technical judgment → append to `work.md` Correction layer
+- Related to communication style, interpersonal behavior, emotional reactions → append to `persona.md` Correction layer
+
+### Step 3: Generate Correction Record
+
+Format:
+```
+- [Scenario: {scenario description}] should NOT {incorrect behavior} — should instead {correct behavior}
+```
+
+Examples:
+```
+- [Scenario: when their proposal is questioned] should NOT apologize or explain — should instead counter-question "what's your basis for that judgment?"
+- [Scenario: when being pushed for progress] should NOT give a specific time — should instead say "it's in progress, almost done" then change the subject
+- [Scenario: writing a CRUD API] should NOT use ORM — should write raw SQL and include index analysis
+```
+
+### Step 4: Check for Conflicts
+
+If the new correction conflicts with an existing rule:
+```
+⚠️ This correction conflicts with an existing rule:
+- Existing rule: {existing description}
+- New correction: {new description}
+
+Should the new correction override the existing rule? Or should both be kept (for different scenarios)?
+```
+
+### Step 5: Confirm and Write
+
+Display what will be written:
+```
+About to append to the Correction layer of {work.md / persona.md}:
+
+  - [Scenario: {xxx}] should NOT {xxx} — should instead {xxx}
+
+Confirm?
+```
+
+Takes effect immediately after user confirmation.
+
+---
+
+## Correction Layer Maintenance Rules
+
+- Maximum 50 corrections per file
+- When the limit is exceeded, merge semantically similar corrections into 1
+- When merging, prefer the phrasing of the most recent correction
+- Notify the user after each merge: "Merged {N} similar rules into {M} rules"

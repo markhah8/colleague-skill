@@ -27,7 +27,7 @@
 плюс своё субъективное описание человека<br>
 и получи **AI Skill, который действительно работает как он**
 
-[Источники данных](#поддерживаемые-источники-данных) · [Установка](#установка) · [Использование](#использование) · [Демо](#демо) · [Подробная установка](../../INSTALL.md) · [**中文**](README_ZH.md) · [**English**](../../README.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
+[Источники данных](#поддерживаемые-источники-данных) · [Установка](#установка) · [Использование](#использование) · [Демо](#демо) · [Подробная установка](../../INSTALL.md) · [**Chinese**](README_ZH.md) · [**English**](../../README.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
 
 </div>
 
@@ -51,7 +51,7 @@
 >
 > 👉 **[titanwings.github.io/colleague-skill-site](https://titanwings.github.io/colleague-skill-site/)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
-> Уже включены: 户晨风.skill · 峰哥亡命天涯.skill · 罗翔.skill и другие
+> Уже включены: HuChenFeng.skill · FengGeWangMingTianYa.skill · LuoXiang.skill и другие
 >
 > ⏳ PR сейчас проверяются вручную — может быть немного медленно, спасибо за терпение!
 

@@ -29,7 +29,7 @@ and get an **AI Skill that actually works like them**
 
 [Supported Sources](#supported-data-sources) · [Install](#install) · [Usage](#usage) · [Demo](#demo) · [Detailed Install](INSTALL.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
 
-[**中文**](docs/lang/README_ZH.md) · [**Español**](docs/lang/README_ES.md) · [**Deutsch**](docs/lang/README_DE.md) · [**日本語**](docs/lang/README_JA.md) · [**Русский**](docs/lang/README_RU.md) · [**Português**](docs/lang/README_PT.md) · [**한국어**](docs/lang/README_KO.md)
+[**Chinese**](docs/lang/README_ZH.md) · [**Español**](docs/lang/README_ES.md) · [**Deutsch**](docs/lang/README_DE.md) · [**日本語**](docs/lang/README_JA.md) · [**Русский**](docs/lang/README_RU.md) · [**Português**](docs/lang/README_PT.md) · [**한국어**](docs/lang/README_KO.md)
 
 </div>
 
@@ -53,7 +53,7 @@ and get an **AI Skill that actually works like them**
 >
 > 👉 **[titanwings.github.io/colleague-skill-site](https://titanwings.github.io/colleague-skill-site/)**
 >
-> Now listed: 户晨风.skill · 峰哥亡命天涯.skill · 罗翔.skill and more
+> Now listed: HuChenFeng.skill · FengGe-On-The-Run.skill · LuoXiang.skill and more
 
 ---
 
@@ -84,7 +84,7 @@ These are independent open-source projects — this project does not include the
 |------|----------|-------------|
 | [WeChatMsg](https://github.com/LC044/WeChatMsg) | Windows | WeChat chat history export, supports multiple formats |
 | [PyWxDump](https://github.com/xaoyaoo/PyWxDump) | Windows | WeChat database decryption & export |
-| [留痕 (Liuhen)](https://github.com/greyovo/留痕) | macOS | WeChat chat history export (recommended for Mac users) |
+| [Liuhen (Traces)](https://github.com/greyovo/留痕) | macOS | WeChat chat history export (recommended for Mac users) |
 
 > Tool recommendations from [@therealXiaomanChu](https://github.com/therealXiaomanChu). Thanks to all the open-source authors — together for cyber-immortality!
 

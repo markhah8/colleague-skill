@@ -27,31 +27,31 @@
 ＋あなたの主観的な人物描写を提供するだけで<br>
 **本当にその人のように働くAI Skill**が生成されます
 
-[データソース](#対応データソース) · [インストール](#インストール) · [使い方](#使い方) · [デモ](#デモ) · [詳細インストール](../../INSTALL.md) · [**中文**](README_ZH.md) · [**English**](../../README.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
+[データソース](#対応データソース) · [インストール](#インストール) · [使い方](#使い方) · [デモ](#デモ) · [詳細インストール](../../INSTALL.md) · [**Chinese**](README_ZH.md) · [**English**](../../README.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
 
 </div>
 
 ---
 
-> 🆕 **2026.04.14 更新** — **WeChat グループ開設！** dot-skill コミュニティで一緒に遊びましょう — skill をシェアしたり、機能を議論したり、Tips を交換したり。
+> 🆕 **2026.04.14 Update** — **WeChat group is now open!** Come enjoy the dot-skill community together — share skills, discuss features, and exchange tips.
 >
 > <img src="../assets/wechat-group-qr-3.png" alt="dot-skill WeChat グループ QR" width="240">
 >
 > QR は 7 日ごとに更新されます — 期限切れの場合は Discord で連絡してください。
 
-> 🆕 **2026.04.13 更新** — **dot-skill ロードマップ公開！** colleague.skill は **dot-skill** へ進化中 — 同僚だけでなく、誰でも蒸留可能に。マルチモーダル出力、スキルエコシステムなど、さらなる展開が進行中。
+> 🆕 **2026.04.13 Update** — **dot-skill Roadmap released!** colleague.skill is evolving into **dot-skill** — distill anyone, not just colleagues. Multimodal output, skill ecosystems and more are in progress.
 >
 > 👉 **[ロードマップ全文を読む](ROADMAP_JA.md)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
 > Issues の整理、Milestones の追加、[公開プロジェクトボード](https://github.com/users/titanwings/projects/1)も設置しました。コミュニティからの貢献を歓迎します — `good-first-issue` ラベルをチェック！
 
-> 🆕 **2026.04.07 更新** — dot-skill リミックスへのコミュニティの熱意がすごい！コミュニティギャラリーを作りました — PR お待ちしています！
+> 🆕 **2026.04.07 Update** — The community's enthusiasm for dot-skill remixes is incredible! I've built a community gallery — PRs welcome!
 >
 > skill や meta-skill を共有して、自分の GitHub リポジトリに直接トラフィックを誘導できます。中間業者なし。
 >
 > 👉 **[titanwings.github.io/colleague-skill-site](https://titanwings.github.io/colleague-skill-site/)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
-> 収録済み：户晨风.skill · 峰哥亡命天涯.skill · 罗翔.skill など
+> Now listed: HuChenFeng.skill · FengGeWangMingTianYa.skill · LuoXiang.skill and more
 >
 > ⏳ 現在 PR は手動レビュー中です。少し時間がかかる場合があります。ご辛抱ください！
 

@@ -1,33 +1,33 @@
 <div align="center"> 
 
-# 同事.skill
+# colleague.skill
 
-> *"你们搞大模型的就是码奸，你们已经害死前端兄弟了，还要害死后端兄弟，测试兄弟，运维兄弟，害死网安兄弟，害死ic兄弟，最后害死自己害死全人类"*
+> *"You AI guys are code traitors — you've already killed the frontend brothers, and now you're going to kill the backend brothers, the testing brothers, the ops brothers, the infosec brothers, the IC brothers, and finally kill yourselves and all of humanity"*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
 [![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
 
-[![Discord](https://img.shields.io/badge/Discord-加入社区-5865F2?logo=discord&logoColor=white)](https://discord.gg/aRjmJBdK)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white)](https://discord.gg/aRjmJBdK)
 
 <br>
 
-你的同事跳槽了，留下大量的文档没人维护？<br>
-你的实习生离职了，只留下空荡的工位和烂尾的项目？<br>
-你的导师毕业了，带走了所有的经验和上下文？<br>
-你的搭档转岗了，熟悉的默契一夜之间归零？<br>
-你的前任交接了，三页文档想概括三年的积累？<br>
+Your colleague left the company, leaving behind a mountain of documents no one maintains?<br>
+Your intern quit, leaving only an empty desk and an unfinished project?<br>
+Your mentor graduated, taking away all the experience and context?<br>
+Your partner transferred teams, and the familiar chemistry vanished overnight?<br>
+Your predecessor handed over, trying to condense three years of work into three pages?<br>
 
-**将冰冷的离别化为温暖的 Skill，欢迎加入赛博永生！**
+**Turn cold goodbyes into warm Skills — welcome to cyber-immortality!**
 
 <br>
 
-提供同事的原材料（飞书消息、钉钉文档、邮件、截图）加上你的主观描述<br>
-生成一个**真正能替他工作的 AI Skill**<br>
-用他的技术规范写代码，用他的语气回答问题，知道他什么时候会甩锅
+Provide the colleague's raw materials (Feishu messages, DingTalk documents, emails, screenshots) plus your subjective description<br>
+Generate an **AI Skill that can truly work in their place**<br>
+Write code in their technical style, answer questions in their tone, know when they would shift blame
 
-[数据来源](#支持的数据来源) · [安装](#安装) · [使用](#使用) · [效果示例](#效果示例) · [详细安装说明](../../INSTALL.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
+[Supported Data Sources](#supported-data-sources) · [Installation](#installation) · [Usage](#usage) · [Demo](#demo) · [Detailed Installation](../../INSTALL.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
 
 [**English**](../../README.md) · [**Español**](README_ES.md) · [**Deutsch**](README_DE.md) · [**日本語**](README_JA.md) · [**Русский**](README_RU.md) · [**Português**](README_PT.md) · [**한국어**](README_KO.md)
 
@@ -35,78 +35,78 @@
 
 ---
 
-> 🆕 **2026.04.14 更新** — **微信交流群建好啦！** 欢迎进群一起玩 dot-skill，分享 skill、聊聊功能、互相交流～
+> 🆕 **2026.04.14 Update** — **WeChat group is live!** Welcome to join the group to play with dot-skill together, share skills, chat about features, and exchange ideas~
 >
-> <img src="../assets/wechat-group-qr-3.png" alt="dot-skill 微信群二维码" width="240">
+> <img src="../assets/wechat-group-qr-3.png" alt="dot-skill WeChat group QR code" width="240">
 >
-> 二维码 7 天内有效，过期了就来 Discord 找我重新发。
+> QR code is valid for 7 days. If expired, come find me on Discord to get a new one.
 
-> 🆕 **2026.04.13 更新** — **dot-skill 路线图正式发布！** colleague.skill 正在进化为 **dot-skill** —— 蒸馏任何人，不止同事。多模态输出、技能生态等更多内容即将到来。
+> 🆕 **2026.04.13 Update** — **dot-skill Roadmap officially released!** colleague.skill is evolving into **dot-skill** — distill anyone, not just colleagues. Multimodal output, skill ecosystems and more are coming.
 >
-> 👉 **[查看完整路线图](ROADMAP_ZH.md)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
+> 👉 **[View full roadmap](ROADMAP_ZH.md)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
-> 我们还整理了 Issues、新增了 Milestones，并建立了[公开项目看板](https://github.com/users/titanwings/projects/1)。欢迎社区贡献 —— 看看 `good-first-issue` 标签！
+> We've also organized Issues, added Milestones, and set up a [public project board](https://github.com/users/titanwings/projects/1). Community contributions welcome — check out the `good-first-issue` labels!
 
-> 🆕 **2026.04.07 更新** — 大家对二创 dot-skill 热情超高！我搓了一个社区平台，欢迎投 PR 一起维护分享！
+> 🆕 **2026.04.07 Update** — The community's enthusiasm for creating dot-skill derivatives has been overwhelming! I've built a community platform — PRs welcome to maintain and share together!
 >
-> 任何 skill 或者 meta-skill 可以一起分享，可以直接给大家自己的 GitHub repo 引流～ 没有中间商赚差价
+> Any skill or meta-skill can be shared here, and you can link directly to your own GitHub repo. No middleman taking a cut.
 >
 > 👉 **[titanwings.github.io/colleague-skill-site](https://titanwings.github.io/colleague-skill-site/)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
-> 已收录：户晨风.skill · 峰哥亡命天涯.skill · 罗翔.skill 等
+> Already listed: HuChenFeng.skill · FengGeWangMingTianYa.skill · LuoXiang.skill and more
 >
-> ⏳ 目前 PR 人工审核中，可能有点慢，感谢耐心等待！
+> ⏳ PRs are currently under manual review, may be a bit slow, thanks for your patience!
 
 ---
 
 Created by [@titanwings](https://github.com/titanwings) | Powered by Shanghai AI Lab · AI Safety Center
 
-> **April 4th Update：** 新增了两个示例同事——一个做安全的工程师和一个有趣的 HR，在 `colleagues/` 目录下，欢迎体验！
+> **April 4th Update:** Added two example colleagues — a security engineer and an interesting HR, in the `colleagues/` directory, feel free to try them out!
 
 
-## 支持的数据来源
+## Supported Data Sources
 
-> 目前还是同事.skill 的 beta 测试版本，后续会有更多来源支持，请多多关注！
+> This is still a beta version of colleague.skill. More source support will be added — stay tuned!
 
-| 来源 | 消息记录 | 文档 / Wiki | 多维表格 | 备注 |
+| Source | Messages | Docs / Wiki | Spreadsheets | Notes |
 |------|:-------:|:-----------:|:-------:|------|
-| 飞书（自动采集） | ✅ API | ✅ | ✅ | 输入姓名即可，全自动 |
-| 钉钉（自动采集） | ⚠️ 浏览器 | ✅ | ✅ | 钉钉 API 不支持历史消息 |
-| Slack（自动采集） | ✅ API | — | — | 需管理员安装 Bot；免费版限 90 天 |
-| 微信聊天记录 | ✅ SQLite | — | — | 目前测试下来不太稳定，推荐先用下方开源工具代替 |
-| PDF | — | ✅ | — | 手动上传 |
-| 图片 / 截图 | ✅ | — | — | 手动上传 |
-| 飞书 JSON 导出 | ✅ | ✅ | — | 手动上传 |
-| 邮件 `.eml` / `.mbox` | ✅ | — | — | 手动上传 |
-| Markdown | ✅ | ✅ | — | 手动上传 |
-| 直接粘贴文字 | ✅ | — | — | 手动输入 |
+| Feishu (auto-collect) | ✅ API | ✅ | ✅ | Just enter the name, fully automatic |
+| DingTalk (auto-collect) | ⚠️ Browser | ✅ | ✅ | DingTalk API doesn't support message history |
+| Slack (auto-collect) | ✅ API | — | — | Admin needs to install Bot; free plan limited to 90 days |
+| WeChat chat history | ✅ SQLite | — | — | Currently unstable in testing, recommend using the open-source tools below instead |
+| PDF | — | ✅ | — | Manual upload |
+| Images / Screenshots | ✅ | — | — | Manual upload |
+| Feishu JSON export | ✅ | ✅ | — | Manual upload |
+| Email `.eml` / `.mbox` | ✅ | — | — | Manual upload |
+| Markdown | ✅ | ✅ | — | Manual upload |
+| Paste text directly | ✅ | — | — | Manual input |
 
-### 推荐的微信聊天记录导出工具
+### Recommended WeChat Chat Export Tools
 
-以下工具为独立的开源项目，本项目不包含它们的代码，仅在解析器中适配了它们的导出格式。目前微信自动解密测试下来不太稳定，可以先用这些开源工具导出聊天记录，再粘贴或导入到本项目中使用：
+The following tools are independent open-source projects. This project does not include their code — our parsers only adapt to their export formats. WeChat auto-decryption has been somewhat unstable in testing, so you can use these open-source tools to export chat history first, then paste or import it into this project:
 
-| 工具 | 平台 | 说明 |
+| Tool | Platform | Description |
 |------|------|------|
-| [WeChatMsg](https://github.com/LC044/WeChatMsg) | Windows | 微信聊天记录导出，支持多种格式 |
-| [PyWxDump](https://github.com/xaoyaoo/PyWxDump) | Windows | 微信数据库解密导出 |
-| [留痕](https://github.com/greyovo/留痕) | macOS | 微信聊天记录导出（Mac 用户推荐） |
+| [WeChatMsg](https://github.com/LC044/WeChatMsg) | Windows | WeChat chat history export, supports multiple formats |
+| [PyWxDump](https://github.com/xaoyaoo/PyWxDump) | Windows | WeChat database decryption and export |
+| [Liuhen (Stay Mark)](https://github.com/greyovo/留痕) | macOS | WeChat chat history export (recommended for Mac users) |
 
-> 工具信息来自 [@therealXiaomanChu](https://github.com/therealXiaomanChu)，感谢各位开源作者，一起助力赛博永生！
+> Tool information from [@therealXiaomanChu](https://github.com/therealXiaomanChu). Thanks to all open-source authors — together for cyber-immortality!
 
 ---
 
-## 安装
+## Installation
 
 ### Claude Code
 
-> **重要**：Claude Code 从 **git 仓库根目录** 的 `.claude/skills/` 查找 skill。请在正确的位置执行。
+> **Important**: Claude Code looks for skills in `.claude/skills/` at the **git repository root**. Please run this in the correct location.
 
 ```bash
-# 安装到当前项目（在 git 仓库根目录执行）
+# Install to current project (run at git repository root)
 mkdir -p .claude/skills
 git clone https://github.com/titanwings/colleague-skill .claude/skills/create-colleague
 
-# 或安装到全局（所有项目都能用）
+# Or install globally (available in all projects)
 git clone https://github.com/titanwings/colleague-skill ~/.claude/skills/create-colleague
 ```
 
@@ -116,119 +116,119 @@ git clone https://github.com/titanwings/colleague-skill ~/.claude/skills/create-
 git clone https://github.com/titanwings/colleague-skill ~/.openclaw/workspace/skills/create-colleague
 ```
 
-### 依赖（可选）
+### Dependencies (optional)
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
-> 飞书/钉钉自动采集需配置 App 凭证，详见 [INSTALL.md](../../INSTALL.md)
+> Feishu / DingTalk auto-collection requires configuring App credentials. See [INSTALL.md](../../INSTALL.md) for details.
 
 ---
 
-## 使用
+## Usage
 
-在 Claude Code 中输入：
+In Claude Code, type:
 
 ```
 /create-colleague
 ```
 
-按提示输入同事姓名、公司职级（如 `字节 2-1 算法工程师`）、性格标签，然后选择数据来源。所有字段均可跳过，仅凭描述也能生成。
+Follow the prompts to enter the colleague's name, company and level (e.g. `ByteDance 2-1 Algorithm Engineer`), personality tags, then choose a data source. All fields can be skipped — even just a description can generate a Skill.
 
-完成后用 `/{slug}` 调用该同事 Skill。
+After completion, invoke the colleague Skill with `/{slug}`.
 
-### 管理命令
+### Management Commands
 
-| 命令 | 说明 |
+| Command | Description |
 |------|------|
-| `/list-colleagues` | 列出所有同事 Skill |
-| `/{slug}` | 调用完整 Skill（Persona + Work） |
-| `/{slug}-work` | 仅工作能力 |
-| `/{slug}-persona` | 仅人物性格 |
-| `/colleague-rollback {slug} {version}` | 回滚到历史版本 |
-| `/delete-colleague {slug}` | 删除 |
+| `/list-colleagues` | List all colleague Skills |
+| `/{slug}` | Invoke full Skill (Persona + Work) |
+| `/{slug}-work` | Work capabilities only |
+| `/{slug}-persona` | Persona only |
+| `/colleague-rollback {slug} {version}` | Rollback to a previous version |
+| `/delete-colleague {slug}` | Delete |
 
 ---
 
-## 效果示例
+## Demo
 
-> 输入：`字节 2-1 后端工程师，INTJ，甩锅高手，字节范`
+> Input: `ByteDance 2-1 backend engineer, INTJ, blame-shifter, ByteDance style`
 
-**场景一：Code Review**
-
-```
-用户      ❯ 帮我看一下这个接口设计
-
-同事.skill ❯ 等等，这个接口的 impact 是什么？背景没说清楚。
-             （看完后）N+1 查询，改掉。返回结构用统一的
-             {code, message, data}，这是规范，不用问为什么。
-```
-
-**场景二：甩锅**
+**Scenario 1: Code Review**
 
 ```
-用户      ❯ 这个 bug 是你引入的吧
+User           ❯ Help me review this interface design
 
-同事.skill ❯ 上线时间对上了吗？那个需求改了好几个地方，还有其他变更。
+colleague.skill ❯ Hold on, what's the impact of this interface? The background isn't clear.
+                  (After reading) N+1 query, fix it. Use the unified
+                  {code, message, data} return structure. That's the standard, don't ask why.
+```
+
+**Scenario 2: Shifting Blame**
+
+```
+User           ❯ This bug was introduced by you, right?
+
+colleague.skill ❯ Does the go-live time line up? That requirement touched many places, and there were other changes.
 ```
 
 ---
 
-## 功能特性
+## Features
 
-### 生成的 Skill 结构
+### Generated Skill Structure
 
-每个同事 Skill 由两部分组成，共同驱动输出：
+Each colleague Skill consists of two parts that drive output together:
 
-| 部分 | 内容 |
+| Part | Content |
 |------|------|
-| **Part A — Work Skill** | 负责系统、技术规范、工作流程、经验知识库 |
-| **Part B — Persona** | 5 层性格结构：硬规则 → 身份 → 表达风格 → 决策模式 → 人际行为 |
+| **Part A — Work Skill** | Responsible systems, technical standards, work processes, experience knowledge base |
+| **Part B — Persona** | 5-layer personality structure: hard rules → identity → expression style → decision patterns → interpersonal behavior |
 
-运行逻辑：`接到任务 → Persona 判断态度 → Work Skill 执行 → 用他的语气输出`
+Execution logic: `Receive task → Persona judges attitude → Work Skill executes → Output in their tone`
 
-### 支持的标签
+### Supported Tags
 
-**个性**：认真负责 · 甩锅高手 · 完美主义 · 差不多就行 · 拖延症 · PUA 高手 · 职场政治玩家 · 向上管理专家 · 阴阳怪气 · 反复横跳 · 话少 · 只读不回 …
+**Personality**: Diligent and responsible · Blame-shifter · Perfectionist · Good enough · Procrastinator · PUA master · Office politician · Managing-up expert · Passive-aggressive · Flip-flops constantly · Quiet · Read but never reply …
 
-**企业文化**：字节范 · 阿里味 · 腾讯味 · 华为味 · 百度味 · 美团味 · 第一性原理 · OKR 狂热者 · 大厂流水线 · 创业公司派
+**Corporate culture**: ByteDance style · Alibaba flavor · Tencent flavor · Huawei flavor · Baidu flavor · Meituan flavor · First principles · OKR zealot · Big corp assembly line · Startup mode
 
-**职级支持**：字节 2-1~3-3+ · 阿里 P5~P11 · 腾讯 T1~T4 · 百度 T5~T9 · 美团 P4~P8 · 华为 13~21 级 · 网易 · 京东 · 小米 …
+**Level support**: ByteDance 2-1~3-3+ · Alibaba P5~P11 · Tencent T1~T4 · Baidu T5~T9 · Meituan P4~P8 · Huawei grades 13~21 · NetEase · JD · Xiaomi …
 
-### 进化机制
+### Evolution Mechanism
 
-- **追加文件** → 自动分析增量 → merge 进对应部分，不覆盖已有结论
-- **对话纠正** → 说「他不会这样，他应该是 xxx」→ 写入 Correction 层，立即生效
-- **版本管理** → 每次更新自动存档，支持回滚到任意历史版本
+- **Append files** → automatically analyze delta → merge into corresponding parts, never overwrite existing conclusions
+- **Conversational correction** → say "they wouldn't do that, they should be xxx" → write to Correction layer, takes effect immediately
+- **Version management** → auto-archive on every update, supports rollback to any previous version
 
 ---
 
-## 项目结构
+## Project Structure
 
-本项目遵循 [AgentSkills](https://agentskills.io) 开放标准，整个 repo 就是一个 skill 目录：
+This project follows the [AgentSkills](https://agentskills.io) open standard. The entire repo is a skill directory:
 
 ```
 create-colleague/
-├── SKILL.md              # skill 入口（官方 frontmatter）
-├── prompts/              # Prompt 模板
-│   ├── intake.md         #   对话式信息录入
-│   ├── work_analyzer.md  #   工作能力提取
-│   ├── persona_analyzer.md #  性格行为提取（含标签翻译表）
-│   ├── work_builder.md   #   work.md 生成模板
-│   ├── persona_builder.md #   persona.md 五层结构模板
-│   ├── merger.md         #   增量 merge 逻辑
-│   └── correction_handler.md # 对话纠正处理
-├── tools/                # Python 工具
-│   ├── feishu_auto_collector.py  # 飞书全自动采集
-│   ├── feishu_browser.py         # 飞书浏览器方案
-│   ├── feishu_mcp_client.py      # 飞书 MCP 方案
-│   ├── dingtalk_auto_collector.py # 钉钉全自动采集
-│   ├── slack_auto_collector.py   # Slack 全自动采集
-│   ├── email_parser.py           # 邮件解析
-│   ├── skill_writer.py           # Skill 文件管理
-│   └── version_manager.py        # 版本存档与回滚
-├── colleagues/           # 生成的同事 Skill（gitignored）
+├── SKILL.md              # Skill entry point (official frontmatter)
+├── prompts/              # Prompt templates
+│   ├── intake.md         #   Dialogue-based information entry
+│   ├── work_analyzer.md  #   Work capability extraction
+│   ├── persona_analyzer.md #  Personality behavior extraction (with tag translation table)
+│   ├── work_builder.md   #   work.md generation template
+│   ├── persona_builder.md #   persona.md five-layer structure template
+│   ├── merger.md         #   Incremental merge logic
+│   └── correction_handler.md # Conversational correction handling
+├── tools/                # Python tools
+│   ├── feishu_auto_collector.py  # Feishu fully automatic collection
+│   ├── feishu_browser.py         # Feishu browser approach
+│   ├── feishu_mcp_client.py      # Feishu MCP approach
+│   ├── dingtalk_auto_collector.py # DingTalk fully automatic collection
+│   ├── slack_auto_collector.py   # Slack fully automatic collection
+│   ├── email_parser.py           # Email parsing
+│   ├── skill_writer.py           # Skill file management
+│   └── version_manager.py        # Version archive and rollback
+├── colleagues/           # Generated colleague Skills (gitignored)
 ├── docs/PRD.md
 ├── requirements.txt
 └── LICENSE
@@ -236,19 +236,19 @@ create-colleague/
 
 ---
 
-## 注意事项
+## Notes
 
-- **原材料质量决定 Skill 质量**：聊天记录 + 长文档 > 仅手动描述
-- 建议优先收集：他**主动写的**长文 > **决策类回复** > 日常消息
-- 飞书自动采集需将 App bot 加入相关群聊
-- 目前还是一个demo版本，如果有bug请多多提issue！
+- **Raw material quality determines Skill quality**: chat records + long documents > manual description only
+- Recommended priority for collection: long-form content **actively written by them** > **decision-type replies** > daily messages
+- Feishu auto-collection requires adding the App bot to relevant group chats
+- This is still a demo version — if you find bugs, please file issues!
 
 ---
-### 📄 技术报告
+### 📄 Technical Report
 
 > **[Colleague.Skill: Automated AI Skill Generation via Expert Knowledge Distillation](colleague_skill.pdf)**
 >
-> 我们写了一篇论文，详细介绍了同事.skill 的系统设计、两层架构（Work Skill + Persona）、多源数据采集、Skill 生成与进化机制，以及在真实场景中的评估结果。感兴趣的话可以看看！
+> We wrote a paper detailing the system design of colleague.skill — the two-layer architecture (Work Skill + Persona), multi-source data collection, Skill generation and evolution mechanisms, and evaluation results in real-world scenarios. Feel free to check it out if you're interested!
 
 ---
 
@@ -270,4 +270,3 @@ MIT License © [titanwings](https://github.com/titanwings)
 
 
 </div>
-

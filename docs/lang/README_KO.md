@@ -27,7 +27,7 @@
 그 사람에 대한 주관적인 설명만 있으면<br>
 **정말 그 사람처럼 일하는 AI 스킬**을 만들 수 있습니다
 
-[지원 데이터 소스](#지원-데이터-소스) · [설치](#설치) · [사용법](#사용법) · [데모](#데모) · [상세 설치](../../INSTALL.md) · [**English**](../../README.md) · [**中文**](README_ZH.md) · [**Español**](README_ES.md) · [**Deutsch**](README_DE.md) · [**日本語**](README_JA.md) · [**Русский**](README_RU.md) · [**Português**](README_PT.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
+[지원 데이터 소스](#지원-데이터-소스) · [설치](#설치) · [사용법](#사용법) · [데모](#데모) · [상세 설치](../../INSTALL.md) · [**English**](../../README.md) · [**Chinese**](README_ZH.md) · [**Español**](README_ES.md) · [**Deutsch**](README_DE.md) · [**日本語**](README_JA.md) · [**Русский**](README_RU.md) · [**Português**](README_PT.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
 
 </div>
 
@@ -45,7 +45,7 @@
 >
 > 👉 **[titanwings.github.io/colleague-skill-site](https://titanwings.github.io/colleague-skill-site/)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
-> 현재 등록된 스킬: 户晨风.skill · 峰哥亡命天涯.skill · 罗翔.skill 외 다수
+> 현재 등록된 스킬: HuChenFeng.skill · FengGeWangMingTianYa.skill · LuoXiang.skill 외 다수
 
 ---
 
@@ -76,7 +76,7 @@ Created by [@titanwings](https://github.com/titanwings) | Powered by Shanghai AI
 |------|--------|------|
 | [WeChatMsg](https://github.com/LC044/WeChatMsg) | Windows | WeChat 대화 기록 내보내기, 여러 형식 지원 |
 | [PyWxDump](https://github.com/xaoyaoo/PyWxDump) | Windows | WeChat 데이터베이스 복호화 및 내보내기 |
-| [留痕 (Liuhen)](https://github.com/greyovo/留痕) | macOS | WeChat 대화 기록 내보내기 (Mac 사용자 권장) |
+| [Liuhen (Stay Mark)](https://github.com/greyovo/留痕) | macOS | WeChat 대화 기록 내보내기 (Mac 사용자 권장) |
 
 > 도구 추천: [@therealXiaomanChu](https://github.com/therealXiaomanChu). 모든 오픈소스 작성자분들께 감사드립니다. 함께 사이버 불멸을 향해 갑시다.
 

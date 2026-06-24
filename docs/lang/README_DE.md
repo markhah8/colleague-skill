@@ -27,7 +27,7 @@ Liefere Quellmaterialien (Slack-Nachrichten, Confluence-Docs, E-Mails, Screensho
 plus deine subjektive Beschreibung der Person<br>
 und erhalte einen **AI Skill, der tatsächlich wie sie arbeitet**
 
-[Datenquellen](#unterstützte-datenquellen) · [Installation](#installation) · [Nutzung](#nutzung) · [Demo](#demo) · [Detaillierte Installation](../../INSTALL.md) · [**中文**](README_ZH.md) · [**English**](../../README.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
+[Datenquellen](#unterstützte-datenquellen) · [Installation](#installation) · [Nutzung](#nutzung) · [Demo](#demo) · [Detaillierte Installation](../../INSTALL.md) · [**Chinese**](README_ZH.md) · [**English**](../../README.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
 
 </div>
 
@@ -51,7 +51,7 @@ und erhalte einen **AI Skill, der tatsächlich wie sie arbeitet**
 >
 > 👉 **[titanwings.github.io/colleague-skill-site](https://titanwings.github.io/colleague-skill-site/)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
-> Bereits gelistet: 户晨风.skill · 峰哥亡命天涯.skill · 罗翔.skill und mehr
+> Bereits gelistet: HuChenFeng.skill · FengGeWangMingTianYa.skill · LuoXiang.skill und mehr
 >
 > ⏳ PRs werden derzeit manuell geprüft — kann etwas dauern, danke für deine Geduld!
 

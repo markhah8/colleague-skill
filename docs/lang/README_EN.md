@@ -27,7 +27,7 @@ Provide source materials (Feishu messages, DingTalk docs, Slack messages, emails
 plus your subjective description of the person<br>
 and get an **AI Skill that actually works like them**
 
-[Supported Sources](#supported-data-sources) · [Install](#install) · [Usage](#usage) · [Demo](#demo) · [Detailed Install](../../INSTALL.md) · [**中文**](../../README.md) · [**Español**](README_ES.md) · [**Deutsch**](README_DE.md) · [**日本語**](README_JA.md) · [**Русский**](README_RU.md) · [**Português**](README_PT.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
+[Supported Sources](#supported-data-sources) · [Install](#install) · [Usage](#usage) · [Demo](#demo) · [Detailed Install](../../INSTALL.md) · [**Chinese**](../../README.md) · [**Español**](README_ES.md) · [**Deutsch**](README_DE.md) · [**日本語**](README_JA.md) · [**Русский**](README_RU.md) · [**Português**](README_PT.md) · [**한국어**](README_KO.md) · [💬 Discord](https://discord.gg/aRjmJBdK)
 
 </div>
 
@@ -51,7 +51,7 @@ and get an **AI Skill that actually works like them**
 >
 > 👉 **[titanwings.github.io/colleague-skill-site](https://titanwings.github.io/colleague-skill-site/)** · **[💬 Discord](https://discord.gg/aRjmJBdK)**
 >
-> Now listed: 户晨风.skill · 峰哥亡命天涯.skill · 罗翔.skill and more
+> Now listed: HuChenFeng.skill · FengGeWangMingTianYa.skill · LuoXiang.skill and more
 >
 > ⏳ PRs are manually reviewed for now — may be a bit slow, thanks for your patience!
 
@@ -84,7 +84,7 @@ These are independent open-source projects — this project does not include the
 |------|----------|-------------|
 | [WeChatMsg](https://github.com/LC044/WeChatMsg) | Windows | WeChat chat history export, supports multiple formats |
 | [PyWxDump](https://github.com/xaoyaoo/PyWxDump) | Windows | WeChat database decryption & export |
-| [留痕 (Liuhen)](https://github.com/greyovo/留痕) | macOS | WeChat chat history export (recommended for Mac users) |
+| [Liuhen (Stay Mark)](https://github.com/greyovo/留痕) | macOS | WeChat chat history export (recommended for Mac users) |
 
 > Tool recommendations from [@therealXiaomanChu](https://github.com/therealXiaomanChu). Thanks to all the open-source authors — together for cyber-immortality!
 

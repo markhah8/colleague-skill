@@ -1,33 +1,33 @@
 #!/usr/bin/env python3
 """
-飞书 MCP 客户端封装（cso1z/Feishu-MCP 方案）
+Feishu MCP Client Wrapper (cso1z/Feishu-MCP approach)
 
-通过 Feishu MCP Server 读取文档、wiki、消息记录。
-适合：公司已授权的文档、有 App token 权限的内容。
+Read documents, wikis, and message history via Feishu MCP Server.
+Suitable for: company-authorized documents, content with App token permissions.
 
-前置要求：
-  1. 安装 Feishu MCP：npm install -g feishu-mcp
-  2. 配置 App ID 和 App Secret（飞书开放平台创建企业自建应用）
-  3. 给应用开通必要权限（见下方 REQUIRED_PERMISSIONS）
+Prerequisites:
+  1. Install Feishu MCP: npm install -g feishu-mcp
+  2. Configure App ID and App Secret (create an enterprise self-built app in Feishu Open Platform)
+  3. Grant the app the necessary permissions (see REQUIRED_PERMISSIONS below)
 
-权限列表（飞书开放平台 → 权限管理 → 开通）：
-  - docs:doc:readonly          读取文档
-  - wiki:wiki:readonly         读取知识库
-  - im:message:readonly        读取消息
-  - bitable:app:readonly       读取多维表格
-  - sheets:spreadsheet:readonly 读取表格
+Permission list (Feishu Open Platform → Permission Management → Grant):
+  - docs:doc:readonly          Read documents
+  - wiki:wiki:readonly         Read knowledge base
+  - im:message:readonly        Read messages
+  - bitable:app:readonly       Read multi-dimensional tables
+  - sheets:spreadsheet:readonly Read spreadsheets
 
-用法：
-  # 配置 token（一次性）
+Usage:
+  # Configure token (one-time)
   python3 feishu_mcp_client.py --setup
 
-  # 读取文档
+  # Read a document
   python3 feishu_mcp_client.py --url "https://xxx.feishu.cn/wiki/xxx" --output out.txt
 
-  # 读取消息记录
-  python3 feishu_mcp_client.py --chat-id "oc_xxx" --target "张三" --output out.txt
+  # Read message history
+  python3 feishu_mcp_client.py --chat-id "oc_xxx" --target "Zhang San" --output out.txt
 
-  # 列出某空间下的所有文档
+  # List all documents in a space
   python3 feishu_mcp_client.py --list-wiki --space-id "xxx"
 """
 
@@ -45,7 +45,7 @@ from typing import Optional
 CONFIG_PATH = Path.home() / ".colleague-skill" / "feishu_config.json"
 
 
-# ─── 配置管理 ────────────────────────────────────────────────────────────────
+# ─── Configuration Management ─────────────────────────────────────────────────
 
 def load_config() -> dict:
     if CONFIG_PATH.exists():
@@ -56,20 +56,20 @@ def load_config() -> dict:
 def save_config(config: dict) -> None:
     CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
     CONFIG_PATH.write_text(json.dumps(config, indent=2))
-    print(f"配置已保存到 {CONFIG_PATH}")
+    print(f"Configuration saved to {CONFIG_PATH}")
 
 
 def setup_config() -> None:
-    print("=== 飞书 MCP 配置 ===")
-    print("请前往飞书开放平台（open.feishu.cn）创建企业自建应用，获取以下信息：\n")
+    print("=== Feishu MCP Configuration ===")
+    print("Please go to Feishu Open Platform (open.feishu.cn) to create an enterprise self-built app and get the following:\n")
 
     app_id = input("App ID (cli_xxx): ").strip()
     app_secret = input("App Secret: ").strip()
 
-    print("\n配置方式选择：")
-    print("  [1] App Token（应用权限，需要在飞书后台开通对应权限）")
-    print("  [2] User Token（个人权限，能访问你本人有权限的所有内容，需要定期刷新）")
-    mode = input("选择 [1/2]，默认 1：").strip() or "1"
+    print("\nChoose configuration mode:")
+    print("  [1] App Token (app permissions, requires granting corresponding permissions in Feishu backend)")
+    print("  [2] User Token (personal permissions, can access all content you have permission to view, requires periodic refresh)")
+    mode = input("Choose [1/2], default 1: ").strip() or "1"
 
     config = {
         "app_id": app_id,
@@ -78,21 +78,21 @@ def setup_config() -> None:
     }
 
     if mode == "2":
-        print("\n获取 User Token：飞书开放平台 → OAuth 2.0 → 获取 user_access_token")
-        user_token = input("User Access Token (u-xxx)：").strip()
+        print("\nGet User Token: Feishu Open Platform → OAuth 2.0 → Get user_access_token")
+        user_token = input("User Access Token (u-xxx): ").strip()
         config["user_token"] = user_token
-        print("注意：User Token 有效期约 2 小时，过期后需要重新配置")
+        print("Note: User Token is valid for ~2 hours and needs to be reconfigured after expiration")
 
     save_config(config)
-    print("\n✅ 配置完成！")
+    print("\n✅ Configuration complete!")
 
 
-# ─── MCP 调用封装 ─────────────────────────────────────────────────────────────
+# ─── MCP Call Wrapper ─────────────────────────────────────────────────────────
 
 def call_mcp(tool: str, params: dict, config: dict) -> dict:
     """
-    通过 npx 调用 feishu-mcp 工具。
-    feishu-mcp 支持 stdio 模式，直接 JSON 通信。
+    Call feishu-mcp tools via npx.
+    feishu-mcp supports stdio mode with direct JSON communication.
     """
     env = os.environ.copy()
     env["FEISHU_APP_ID"] = config.get("app_id", "")
@@ -121,16 +121,16 @@ def call_mcp(tool: str, params: dict, config: dict) -> dict:
             timeout=30,
         )
         if result.returncode != 0:
-            raise RuntimeError(f"MCP 调用失败：{result.stderr}")
+            raise RuntimeError(f"MCP call failed: {result.stderr}")
         return json.loads(result.stdout)
     except FileNotFoundError:
-        print("错误：未找到 npx，请先安装 Node.js", file=sys.stderr)
-        print("安装 Feishu MCP：npm install -g feishu-mcp", file=sys.stderr)
+        print("Error: npx not found, please install Node.js first", file=sys.stderr)
+        print("Install Feishu MCP: npm install -g feishu-mcp", file=sys.stderr)
         sys.exit(1)
 
 
 def extract_doc_token(url: str) -> tuple[str, str]:
-    """从飞书 URL 中提取文档 token 和类型"""
+    """Extract document token and type from a Feishu URL"""
     import re
     patterns = [
         (r"/wiki/([A-Za-z0-9]+)", "wiki"),
@@ -143,13 +143,13 @@ def extract_doc_token(url: str) -> tuple[str, str]:
         m = re.search(pattern, url)
         if m:
             return m.group(1), doc_type
-    raise ValueError(f"无法从 URL 解析文档 token：{url}")
+    raise ValueError(f"Cannot parse document token from URL: {url}")
 
 
-# ─── 功能函数 ─────────────────────────────────────────────────────────────────
+# ─── Feature Functions ────────────────────────────────────────────────────────
 
 def fetch_doc_via_mcp(url: str, config: dict) -> str:
-    """通过 MCP 读取飞书文档或 Wiki"""
+    """Read a Feishu document or Wiki via MCP"""
     token, doc_type = extract_doc_token(url)
 
     if doc_type == "wiki":
@@ -159,20 +159,20 @@ def fetch_doc_via_mcp(url: str, config: dict) -> str:
     elif doc_type == "sheet":
         result = call_mcp("get_spreadsheet_content", {"spreadsheet_token": token}, config)
     else:
-        raise ValueError(f"不支持的文档类型：{doc_type}")
+        raise ValueError(f"Unsupported document type: {doc_type}")
 
-    # 提取 MCP 返回的内容
+    # Extract content from MCP response
     if "result" in result:
         content = result["result"]
         if isinstance(content, list):
-            # MCP tool result 格式
+            # MCP tool result format
             for item in content:
                 if isinstance(item, dict) and item.get("type") == "text":
                     return item.get("text", "")
         elif isinstance(content, str):
             return content
     elif "error" in result:
-        raise RuntimeError(f"MCP 返回错误：{result['error']}")
+        raise RuntimeError(f"MCP returned error: {result['error']}")
 
     return json.dumps(result, ensure_ascii=False, indent=2)
 
@@ -183,12 +183,12 @@ def fetch_messages_via_mcp(
     limit: int,
     config: dict,
 ) -> str:
-    """通过 MCP 读取群聊消息记录"""
+    """Read group chat message history via MCP"""
     result = call_mcp(
         "get_chat_messages",
         {
             "chat_id": chat_id,
-            "page_size": min(limit, 50),  # 飞书 API 单次最多 50 条
+            "page_size": min(limit, 50),  # Feishu API max 50 per request
         },
         config,
     )
@@ -203,46 +203,46 @@ def fetch_messages_via_mcp(
         except Exception:
             return raw
 
-    # 过滤目标人物
+    # Filter by target person
     if target_name:
         messages = [
             m for m in messages
             if target_name in str(m.get("sender", {}).get("name", ""))
         ]
 
-    # 分类输出
+    # Categorized output
     long_msgs = [m for m in messages if len(str(m.get("content", ""))) > 50]
     short_msgs = [m for m in messages if len(str(m.get("content", ""))) <= 50]
 
     lines = [
-        "# 飞书消息记录（MCP 方案）",
-        f"群聊 ID：{chat_id}",
-        f"目标人物：{target_name or '全部'}",
-        f"共 {len(messages)} 条",
+        "# Feishu Message History (MCP approach)",
+        f"Group chat ID: {chat_id}",
+        f"Target: {target_name or 'All'}",
+        f"Total {len(messages)} messages",
         "",
         "---",
         "",
-        "## 长消息",
+        "## Long Messages",
         "",
     ]
     for m in long_msgs:
         sender = m.get("sender", {}).get("name", "")
         content = m.get("content", "")
         ts = m.get("create_time", "")
-        lines.append(f"[{ts}] {sender}：{content}")
+        lines.append(f"[{ts}] {sender}: {content}")
         lines.append("")
 
-    lines += ["---", "", "## 日常消息", ""]
+    lines += ["---", "", "## Everyday Messages", ""]
     for m in short_msgs[:200]:
         sender = m.get("sender", {}).get("name", "")
         content = m.get("content", "")
-        lines.append(f"{sender}：{content}")
+        lines.append(f"{sender}: {content}")
 
     return "\n".join(lines)
 
 
 def list_wiki_docs(space_id: str, config: dict) -> str:
-    """列出知识库空间下的所有文档"""
+    """List all documents under a knowledge base space"""
     result = call_mcp("list_wiki_nodes", {"space_id": space_id}, config)
     raw = result.get("result", "")
     if isinstance(raw, str):
@@ -253,15 +253,15 @@ def list_wiki_docs(space_id: str, config: dict) -> str:
 # ─── CLI ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="飞书 MCP 客户端")
-    parser.add_argument("--setup", action="store_true", help="初始化配置（App ID / Secret）")
-    parser.add_argument("--url", help="飞书文档/Wiki/表格链接")
-    parser.add_argument("--chat-id", help="群聊 ID（oc_xxx 格式）")
-    parser.add_argument("--target", help="目标人物姓名")
-    parser.add_argument("--limit", type=int, default=500, help="最多获取消息数")
-    parser.add_argument("--list-wiki", action="store_true", help="列出知识库文档")
-    parser.add_argument("--space-id", help="知识库 Space ID")
-    parser.add_argument("--output", default=None, help="输出文件路径")
+    parser = argparse.ArgumentParser(description="Feishu MCP Client")
+    parser.add_argument("--setup", action="store_true", help="Initialize configuration (App ID / Secret)")
+    parser.add_argument("--url", help="Feishu document/Wiki/spreadsheet link")
+    parser.add_argument("--chat-id", help="Group chat ID (oc_xxx format)")
+    parser.add_argument("--target", help="Target person's name")
+    parser.add_argument("--limit", type=int, default=500, help="Maximum messages to retrieve")
+    parser.add_argument("--list-wiki", action="store_true", help="List knowledge base documents")
+    parser.add_argument("--space-id", help="Knowledge base Space ID")
+    parser.add_argument("--output", default=None, help="Output file path")
 
     args = parser.parse_args()
 
@@ -271,17 +271,17 @@ def main() -> None:
 
     config = load_config()
     if not config:
-        print("错误：尚未配置，请先运行：python3 feishu_mcp_client.py --setup", file=sys.stderr)
+        print("Error: not configured yet. Please run: python3 feishu_mcp_client.py --setup", file=sys.stderr)
         sys.exit(1)
 
     content = ""
 
     if args.url:
-        print(f"通过 MCP 读取：{args.url}", file=sys.stderr)
+        print(f"Reading via MCP: {args.url}", file=sys.stderr)
         content = fetch_doc_via_mcp(args.url, config)
 
     elif args.chat_id:
-        print(f"通过 MCP 读取消息：{args.chat_id}", file=sys.stderr)
+        print(f"Reading messages via MCP: {args.chat_id}", file=sys.stderr)
         content = fetch_messages_via_mcp(
             args.chat_id,
             args.target or "",
@@ -291,7 +291,7 @@ def main() -> None:
 
     elif args.list_wiki:
         if not args.space_id:
-            print("错误：--list-wiki 需要 --space-id", file=sys.stderr)
+            print("Error: --list-wiki requires --space-id", file=sys.stderr)
             sys.exit(1)
         content = list_wiki_docs(args.space_id, config)
 
@@ -301,7 +301,7 @@ def main() -> None:
 
     if args.output:
         Path(args.output).write_text(content, encoding="utf-8")
-        print(f"✅ 已保存到 {args.output}", file=sys.stderr)
+        print(f"✅ Saved to {args.output}", file=sys.stderr)
     else:
         print(content)
 

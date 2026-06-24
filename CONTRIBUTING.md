@@ -1,14 +1,14 @@
-# Contributing to colleague.skill / 贡献指南
+# Contributing to colleague.skill / Contribution Guide
 
-> English first, 中文在下方。
+> English first, Chinese below.
 
 Thank you for considering a contribution! This project turns colleagues (and anyone else) into AI skills, and it's only as good as its community.
 
-感谢你愿意贡献。这个项目的目标是把同事（以及任何人）蒸馏成 AI skill，社区越活跃它就越好。
+Thank you for your willingness to contribute. The goal of this project is to distill colleagues (and anyone else) into AI skills — the more active the community, the better it becomes.
 
 ---
 
-## Ways to contribute / 贡献方式
+## Ways to contribute / Contribution Methods
 
 - **Report bugs** — open a [bug report](.github/ISSUE_TEMPLATE/bug_report.md)
 - **Suggest features** — open a [feature request](.github/ISSUE_TEMPLATE/feature_request.md)
@@ -19,7 +19,7 @@ Thank you for considering a contribution! This project turns colleagues (and any
 
 ---
 
-## Development setup / 开发环境
+## Development setup / Development Environment
 
 ```bash
 git clone https://github.com/titanwings/colleague-skill.git
@@ -31,7 +31,7 @@ Python 3.9+ is required. Optional extras (`openpyxl`, auto-collector credentials
 
 ---
 
-## Branch & PR workflow / 分支和 PR 流程
+## Branch & PR workflow / Branch and PR Workflow
 
 1. Fork the repo and create a branch from `main`:
    - `feat/<short-name>` for new features
@@ -49,7 +49,7 @@ Python 3.9+ is required. Optional extras (`openpyxl`, auto-collector credentials
 
 ---
 
-## Commit message style / 提交信息规范
+## Commit message style / Commit Message Standards
 
 Follow [Conventional Commits](https://www.conventionalcommits.org/):
 
@@ -65,7 +65,7 @@ Keep the subject under 72 characters. Use the body for the *why*, not the *what*
 
 ---
 
-## Code style / 代码风格
+## Code style / Code Style
 
 - Match surrounding code — we don't enforce a formatter yet, but consistency matters
 - Python: prefer standard library where possible; add to `requirements.txt` only if necessary
@@ -74,7 +74,7 @@ Keep the subject under 72 characters. Use the body for the *why*, not the *what*
 
 ---
 
-## Tests / 测试
+## Tests / Testing
 
 New functionality should come with tests under `tests/test_*.py`. Use `unittest` (stdlib) — no extra test framework.
 
@@ -87,7 +87,7 @@ Don't hit live APIs in CI. Mock with `unittest.mock` or the `responses` library.
 
 ---
 
-## Security / 安全
+## Security / Security
 
 - **Never commit secrets, tokens, or personal data.** If you accidentally do, rotate the credential immediately and let a maintainer know.
 - Config files that hold credentials should be written to the user's home (e.g. `~/.colleague-skill/`) with permission `0600`.
@@ -95,7 +95,7 @@ Don't hit live APIs in CI. Mock with `unittest.mock` or the `responses` library.
 
 ---
 
-## Docs / 文档
+## Docs / Documentation
 
 - User-facing behavior changes → update `README.md`, `SKILL.md`, and `INSTALL.md`
 - If you add a language translation of the README, also update the language nav strip in every other `docs/lang/README_*.md`
@@ -103,7 +103,7 @@ Don't hit live APIs in CI. Mock with `unittest.mock` or the `responses` library.
 
 ---
 
-## Community / 社区
+## Community / Community
 
 - [💬 Discord](https://discord.gg/aRjmJBdK) — main chat
 - [GitHub Discussions](https://github.com/titanwings/colleague-skill/discussions) — long-form Q&A and design threads
@@ -113,6 +113,6 @@ Be kind. Assume good intent. Disagree on the idea, not the person.
 
 ---
 
-## License / 许可
+## License / License
 
 By contributing, you agree that your contributions will be licensed under the [MIT License](LICENSE).
